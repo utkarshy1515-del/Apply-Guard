@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ApplyGuard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="popup-body">
+    <main class="popup-shell">
+      <header class="brand-row">
+        <div class="brand-mark" aria-hidden="true">A</div>
+        <div><h1>ApplyGuard</h1><p>Did I already apply?</p></div>
+        <button id="historyButton" class="icon-button" title="View application history" aria-label="View application history">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5M12 7v5l3 2"/></svg>
+        </button>
+      </header>
+
+      <section id="loading" class="loading" aria-live="polite"><span></span>Checking this page…</section>
+
+      <section id="unsupported" class="state-panel hidden">
+        <div class="state-icon muted">—</div>
+        <h2>This page can’t be saved</h2>
+        <p>Open a job listing in a regular browser tab, then try again.</p>
+      </section>
+
+      <section id="jobPanel" class="hidden">
+        <div id="statusCard" class="status-card new">
+          <div id="statusIcon" class="status-icon" aria-hidden="true">?</div>
+          <div><span id="statusLabel">Not marked yet</span><strong id="statusText">Ready when you are</strong></div>
+        </div>
+
+        <div class="job-details">
+          <label for="roleInput">Role</label>
+          <input id="roleInput" maxlength="120" autocomplete="off" />
+          <label for="companyInput">Company</label>
+          <input id="companyInput" maxlength="120" autocomplete="off" />
+          <div class="url-row" title="Current job URL">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7.5l-1.1 1.1M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7.1l1.1-1.1"/></svg>
+            <span id="displayUrl"></span>
+          </div>
+        </div>
+
+        <button id="primaryButton" class="primary-button"><span id="buttonIcon">✓</span><span id="buttonText">Mark as applied</span></button>
+        <button id="removeButton" class="text-button hidden">Undo “applied” status</button>
+        <p id="message" class="message" role="status"></p>
+      </section>
+
+      <footer><span class="privacy-dot"></span>Saved only on this device</footer>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application history — ApplyGuard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="history-body">
+    <main class="history-shell">
+      <header class="history-header">
+        <div class="brand-mark">A</div>
+        <div><h1>Application history</h1><p>Your locally saved job applications.</p></div>
+        <span id="count" class="history-count">0 applications</span>
+      </header>
+      <input id="search" class="search" type="search" placeholder="Search roles or companies…" aria-label="Search applications" />
+      <div id="list" class="history-list"></div>
+    </main>
+    <script type="module" src="history.js"></script>
+  </body>
+</html>

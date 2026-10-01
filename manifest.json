@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "ApplyGuard — Did I Already Apply?",
+  "version": "1.0.0",
+  "description": "Know instantly whether you already applied to the job you're viewing.",
+  "permissions": ["activeTab", "scripting", "storage", "tabs"],
+  "action": {
+    "default_title": "ApplyGuard",
+    "default_popup": "popup.html"
+  },
+  "options_page": "history.html"
+}
